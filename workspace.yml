@@ -4,6 +4,10 @@ info:
   type: workspace
 
 collections:
+  - name: "REKO-AUTH"
+    path: "collections/REKO-AUTH"
+  - name: "REKO-AI-RECOMMENDATION"
+    path: "collections/REKO-AI-RECOMMENDATION"
 
 specs:
 
