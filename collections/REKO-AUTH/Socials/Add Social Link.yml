@@ -1,0 +1,20 @@
+info:
+  name: Add Social Link
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/socials/"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "facebook",
+        "url": "https://facebook.com/testuser"
+      }
+  auth: bearer
+
+auth:
+  bearer:
+    token: "{{ACCESS_TOKEN}}"

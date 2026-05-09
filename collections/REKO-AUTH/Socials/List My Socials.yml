@@ -1,0 +1,14 @@
+info:
+  name: List My Socials
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/socials/"
+  body: none
+  auth: bearer
+
+auth:
+  bearer:
+    token: "{{ACCESS_TOKEN}}"

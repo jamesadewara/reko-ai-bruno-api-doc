@@ -1,0 +1,23 @@
+info:
+  name: Verify OTP For Account Activation
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/auth/verify-otp"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "jamesadewara3@gmail.com",
+        "code": "325504",
+        "purpose": "verify" // reset_password
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

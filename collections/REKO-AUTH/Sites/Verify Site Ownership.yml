@@ -1,0 +1,14 @@
+info:
+  name: Verify Site Ownership
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/sites/{{SITE_KEY}}/verify"
+  body: none
+  auth: bearer
+
+auth:
+  bearer:
+    token: "{{ACCESS_TOKEN}}"

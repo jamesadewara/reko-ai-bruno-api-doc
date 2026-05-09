@@ -1,0 +1,23 @@
+info:
+  name: Create Ad
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/"
+  body:
+    type: json
+    data: |-
+      {
+        "headline": "Test Ad Headline",
+        "website_url": "https://example.com/promo",
+        "content": "This is a test ad content description.",
+        "image_url": "https://example.com/image.jpg",
+        "categories": ["technology", "saas"]
+      }
+  auth: bearer
+
+auth:
+  bearer:
+    token: "{{ACCESS_TOKEN}}"

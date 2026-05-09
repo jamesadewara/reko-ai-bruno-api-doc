@@ -1,0 +1,20 @@
+info:
+  name: Register Website
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/sites/register"
+  body:
+    type: json
+    data: |-
+      {
+        "website_url": "https://mysite.com",
+        "declared_categories": ["blog", "tech"]
+      }
+  auth: bearer
+
+auth:
+  bearer:
+    token: "{{ACCESS_TOKEN}}"
