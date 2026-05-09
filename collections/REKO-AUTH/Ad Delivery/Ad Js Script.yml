@@ -1,11 +1,12 @@
 info:
-  name: Get JWKS
+  name: Ad Js Script
   type: http
-  seq: 3
+  seq: 2
 
 http:
   method: GET
-  url: "{{REKO_AI_AUTH_URL}}/api/v1/.well-known/jwks.json"
+  url: "{{REKO_AI_AUTH_URL}}/v1/reko.js"
+  auth: inherit
 
 settings:
   encodeUrl: true

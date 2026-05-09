@@ -5,6 +5,17 @@ info:
 
 http:
   method: GET
-  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/serve?site={{SITE_KEY}}"
-  body: none
-  auth: none
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/serve?site=site_ec6904a4"
+  params:
+    - name: site
+      value: site_ec6904a4
+      type: query
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

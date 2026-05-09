@@ -1,15 +1,18 @@
 info:
-  name: Verify Site Ownership
+  name: Fetch Ad
   type: http
-  seq: 2
+  seq: 4
 
 http:
-  method: POST
-  url: "{{REKO_AI_AUTH_URL}}/api/v1/sites/:SITE_KEY/verify"
+  method: GET
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/:ad_id"
   params:
-    - name: SITE_KEY
-      value: site_ec6904a4
+    - name: ad_id
+      value: d4255409-c25a-44d8-a63e-132290a93783
       type: path
+  body:
+    type: json
+    data: ""
   auth:
     type: bearer
     token: "{{ACCESS_TOKEN}}"

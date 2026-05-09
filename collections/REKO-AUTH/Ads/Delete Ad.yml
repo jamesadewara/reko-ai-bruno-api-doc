@@ -1,14 +1,14 @@
 info:
-  name: Verify Site Ownership
+  name: Delete Ad
   type: http
-  seq: 2
+  seq: 3
 
 http:
-  method: POST
-  url: "{{REKO_AI_AUTH_URL}}/api/v1/sites/:SITE_KEY/verify"
+  method: DELETE
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/:ad_id"
   params:
-    - name: SITE_KEY
-      value: site_ec6904a4
+    - name: ad_id
+      value: 38eda08e-df46-4d74-afa3-e3f890872754
       type: path
   auth:
     type: bearer
