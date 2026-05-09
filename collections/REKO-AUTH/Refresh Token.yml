@@ -1,0 +1,15 @@
+info:
+  name: Refresh Token
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/auth/token/refresh"
+  body:
+    type: json
+    data: |-
+      {
+        "refresh": "{{REFRESH_TOKEN}}"
+      }
+  auth: inherit

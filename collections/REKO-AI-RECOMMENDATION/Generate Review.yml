@@ -1,0 +1,21 @@
+info:
+  name: Generate Review
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/reviews/generate"
+  body:
+    type: json
+    data: |-
+      {
+        "product_name": "Inception (2010)",
+        "product_category": "Movie",
+        "product_description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
+      }
+  auth: bearer
+
+auth:
+  bearer:
+    token: "{{ACCESS_TOKEN}}"
