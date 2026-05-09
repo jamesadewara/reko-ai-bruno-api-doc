@@ -1,0 +1,14 @@
+meta:
+  name: Get Profile
+  type: http
+  seq: 5
+
+get {
+  url: {{REKO_AI_AUTH_URL}}/api/v1/auth/profile
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}

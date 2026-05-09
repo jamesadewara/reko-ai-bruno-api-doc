@@ -1,0 +1,26 @@
+meta:
+  name: Get Recommendations
+  type: http
+  seq: 3
+
+post {
+  url: {{REKO_AI_SYSTEM_URL}}/api/v1/recommend/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+    "context": {
+      "time_of_day": "evening",
+      "location": "Lagos",
+      "device": "mobile",
+      "recent_activity": ["watched action movie trailer"]
+    },
+    "limit": 5
+  }
+}

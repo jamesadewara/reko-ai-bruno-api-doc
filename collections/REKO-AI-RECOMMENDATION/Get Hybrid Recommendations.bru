@@ -1,0 +1,25 @@
+meta:
+  name: Get Hybrid Recommendations
+  type: http
+  seq: 4
+
+post {
+  url: {{REKO_AI_SYSTEM_URL}}/api/v1/recommend/hybrid
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{ACCESS_TOKEN}}
+}
+
+body:json {
+  {
+    "context": {
+      "time_of_day": "afternoon",
+      "location": "Abuja",
+      "device": "desktop"
+    },
+    "limit": 5
+  }
+}
