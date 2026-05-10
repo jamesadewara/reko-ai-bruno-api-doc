@@ -11,7 +11,7 @@ http:
     data: |-
       {
         "email": "jamesadewara3@gmail.com",
-        "code": "325504",
+        "code": "290090",
         "purpose": "verify" // reset_password
       }
   auth: inherit

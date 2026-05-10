@@ -6,6 +6,12 @@ info:
 http:
   method: POST
   url: "{{REKO_AI_SYSTEM_URL}}/api/v1/users/me/analyze"
-  body:
-    type: none
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

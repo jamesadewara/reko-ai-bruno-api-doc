@@ -10,12 +10,19 @@ http:
     type: json
     data: |-
       {
-        "user_id": "user_uuid_here",
-        "name": "James",
-        "email": "jamesadewara3@gmail.com",
         "handles": {
-          "github": "jamesadewara",
-          "twitter": "jamesadewara"
+          "x": "https://x.com/jamesadewaradev",
+          "linkedin": "https://www.linkedin.com/in/james-adewara",
+          "github": "https://github.com/jamesadewara",
+          "website": "https://jamesadewara.me/"
         }
       }
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
