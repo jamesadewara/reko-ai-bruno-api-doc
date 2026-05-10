@@ -1,0 +1,11 @@
+info:
+  name: Create Chat
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/chats"
+  body:
+    type: none
+  auth: inherit

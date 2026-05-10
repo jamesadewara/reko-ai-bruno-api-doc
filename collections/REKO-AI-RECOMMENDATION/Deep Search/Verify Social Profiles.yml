@@ -1,0 +1,19 @@
+info:
+  name: Verify Social Profiles
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/search/verify"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": "user_uuid_here",
+        "verified_urls": {
+          "github": "https://github.com/jamesadewara",
+          "twitter": "https://twitter.com/jamesadewara"
+        }
+      }
+  auth: inherit

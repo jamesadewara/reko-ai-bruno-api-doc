@@ -1,0 +1,21 @@
+info:
+  name: Perform Deep Search
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/search/deep"
+  body:
+    type: json
+    data: |-
+      {
+        "user_id": "user_uuid_here",
+        "name": "James",
+        "email": "jamesadewara3@gmail.com",
+        "handles": {
+          "github": "jamesadewara",
+          "twitter": "jamesadewara"
+        }
+      }
+  auth: inherit
