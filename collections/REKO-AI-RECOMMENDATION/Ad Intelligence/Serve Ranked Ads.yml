@@ -10,7 +10,7 @@ http:
     type: json
     data: |-
       {
-        "site_key": "example_site_key",
+        "site_key": "site_83009968",
         "page_context": "Exploring the best fashion trends in 2026",
         "anonymous_scores": {
           "fashion": 0.8,
@@ -20,3 +20,9 @@ http:
         "top_n": 1
       }
   auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

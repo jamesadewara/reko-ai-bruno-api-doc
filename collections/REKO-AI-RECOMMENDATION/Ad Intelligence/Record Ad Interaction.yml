@@ -10,8 +10,14 @@ http:
     type: json
     data: |-
       {
-        "ad_id": "ad_uuid_here",
-        "ad_categories": ["fashion", "luxury"],
+        "ad_id": "5250077a-b8b9-4e6f-b3bd-ae4d9034f006",
+        "ad_categories": ["burger", "food"],
         "event_type": "ad_click"
       }
   auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
