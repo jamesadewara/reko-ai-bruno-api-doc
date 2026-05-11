@@ -1,11 +1,11 @@
 info:
-  name: Logout
+  name: Update Message
   type: http
   seq: 7
 
 http:
-  method: POST
-  url: "{{REKO_AI_AUTH_URL}}/api/v1/auth/logout"
+  method: PATCH
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/chats/:chatId/messages/:messageId"
   auth:
     type: bearer
     token: "{{ACCESS_TOKEN}}"
@@ -13,8 +13,12 @@ http:
     type: json
     json: |
       {
-        "refresh_token": "{{REFRESH_TOKEN}}"
+        "content": "Updated message content"
       }
+  params:
+    path:
+      chatId: 
+      messageId: 
 
 settings:
   encodeUrl: true

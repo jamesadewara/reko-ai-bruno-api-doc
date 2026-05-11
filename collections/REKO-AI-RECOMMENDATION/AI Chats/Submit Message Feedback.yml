@@ -1,0 +1,28 @@
+info:
+  name: Submit Message Feedback
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/chats/:chatId/message/:messageId/feedback"
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+  body:
+    type: json
+    json: |
+      {
+        "sentiment": "like",
+        "topics": ["innovation", "design"]
+      }
+  params:
+    path:
+      chatId: 
+      messageId: 
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

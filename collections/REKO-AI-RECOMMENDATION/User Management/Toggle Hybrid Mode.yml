@@ -1,11 +1,11 @@
 info:
-  name: Update Profile
+  name: Toggle Hybrid Mode
   type: http
-  seq: 6
+  seq: 4
 
 http:
   method: PUT
-  url: "{{REKO_AI_AUTH_URL}}/api/v1/auth/profile"
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/users/me/hybrid-toggle"
   auth:
     type: bearer
     token: "{{ACCESS_TOKEN}}"
@@ -13,8 +13,7 @@ http:
     type: json
     json: |
       {
-        "name": "John Doe Updated",
-        "bio": "New bio content"
+        "enabled": true
       }
 
 settings:

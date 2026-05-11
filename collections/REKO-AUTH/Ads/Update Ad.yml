@@ -1,11 +1,11 @@
 info:
-  name: Update Profile
+  name: Update Ad
   type: http
   seq: 6
 
 http:
-  method: PUT
-  url: "{{REKO_AI_AUTH_URL}}/api/v1/auth/profile"
+  method: PATCH
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/:adId"
   auth:
     type: bearer
     token: "{{ACCESS_TOKEN}}"
@@ -13,9 +13,12 @@ http:
     type: json
     json: |
       {
-        "name": "John Doe Updated",
-        "bio": "New bio content"
+        "title": "Updated Ad Title",
+        "description": "Updated ad description"
       }
+  params:
+    path:
+      adId: 
 
 settings:
   encodeUrl: true
