@@ -1,0 +1,27 @@
+info:
+  name: Pause or Activate Ad
+  type: http
+  seq: 5
+
+http:
+  method: PATCH
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/:ad_id/status"
+  params:
+    - name: ad_id
+      value: d4255409-c25a-44d8-a63e-132290a93783
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+          "status": "paused" // "pause"
+      }
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

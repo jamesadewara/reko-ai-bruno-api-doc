@@ -1,0 +1,28 @@
+info:
+  name: Update Chat
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/chats/:chat_id"
+  params:
+    - name: chat_id
+      value: 6a001ad7b97a9d4e0e5fe397
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "name": "j",
+        "body": "update message"
+      }
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

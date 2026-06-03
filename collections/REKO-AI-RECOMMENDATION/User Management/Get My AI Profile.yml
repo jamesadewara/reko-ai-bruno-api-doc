@@ -1,0 +1,17 @@
+info:
+  name: Get My AI Profile
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/users/me/model"
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

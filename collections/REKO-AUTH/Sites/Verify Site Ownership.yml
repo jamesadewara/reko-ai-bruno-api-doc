@@ -1,0 +1,21 @@
+info:
+  name: Verify Site Ownership
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/sites/:SITE_KEY/verify"
+  params:
+    - name: SITE_KEY
+      value: site_ec6904a4
+      type: path
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

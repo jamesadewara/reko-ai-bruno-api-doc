@@ -1,0 +1,27 @@
+info:
+  name: Send Message
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/chats/:chat_id/message"
+  params:
+    - name: chat_id
+      value: 6a001ad7b97a9d4e0e5fe397
+      type: path
+  body:
+    type: json
+    data: |-
+      {
+        "message": "I'm feeling hungry, what should I eat in Lagos?"
+      }
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: Update Profile
+  type: http
+  seq: 6
+
+http:
+  method: PUT
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/auth/profile"
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+  body:
+    type: json
+    json: |
+      {
+        "name": "John Doe Updated",
+        "bio": "New bio content"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

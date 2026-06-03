@@ -1,0 +1,23 @@
+info:
+  name: Record Ad Interaction
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/ads/interaction"
+  body:
+    type: json
+    data: |-
+      {
+        "ad_id": "5250077a-b8b9-4e6f-b3bd-ae4d9034f006",
+        "ad_categories": ["burger", "food"],
+        "event_type": "ad_click"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

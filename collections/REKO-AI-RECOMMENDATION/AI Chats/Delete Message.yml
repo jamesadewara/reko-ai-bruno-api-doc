@@ -1,0 +1,21 @@
+info:
+  name: Delete Message
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/chats/:chatId/messages/:messageId"
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+  params:
+    path:
+      chatId: 
+      messageId: 
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,21 @@
+info:
+  name: Delete Ad
+  type: http
+  seq: 3
+
+http:
+  method: DELETE
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/:ad_id"
+  params:
+    - name: ad_id
+      value: 38eda08e-df46-4d74-afa3-e3f890872754
+      type: path
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

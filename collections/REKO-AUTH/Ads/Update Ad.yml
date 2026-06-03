@@ -1,0 +1,27 @@
+info:
+  name: Update Ad
+  type: http
+  seq: 6
+
+http:
+  method: PATCH
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/ads/:adId"
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+  body:
+    type: json
+    json: |
+      {
+        "title": "Updated Ad Title",
+        "description": "Updated ad description"
+      }
+  params:
+    path:
+      adId: 
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,28 @@
+info:
+  name: Perform Deep Search
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/search/deep"
+  body:
+    type: json
+    data: |-
+      {
+        "handles": {
+          "x": "https://x.com/jamesadewaradev",
+          "linkedin": "https://www.linkedin.com/in/james-adewara",
+          "github": "https://github.com/jamesadewara",
+          "website": "https://jamesadewara.me/"
+        }
+      }
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

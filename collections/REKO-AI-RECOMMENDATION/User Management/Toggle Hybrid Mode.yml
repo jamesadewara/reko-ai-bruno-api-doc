@@ -1,0 +1,23 @@
+info:
+  name: Toggle Hybrid Mode
+  type: http
+  seq: 4
+
+http:
+  method: PUT
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/users/me/hybrid-toggle"
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+  body:
+    type: json
+    json: |
+      {
+        "enabled": true
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

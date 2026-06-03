@@ -1,0 +1,24 @@
+info:
+  name: Register Website
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{REKO_AI_AUTH_URL}}/api/v1/sites/register"
+  body:
+    type: json
+    data: |-
+      {
+        "website_url": "https://coffeeshop-by-james.netlify.app",
+        "declared_categories": ["blog", "tech"]
+      }
+  auth:
+    type: bearer
+    token: "{{ACCESS_TOKEN}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

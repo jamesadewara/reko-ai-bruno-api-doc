@@ -1,0 +1,28 @@
+info:
+  name: Serve Ranked Ads
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{REKO_AI_SYSTEM_URL}}/api/v1/ads/serve"
+  body:
+    type: json
+    data: |-
+      {
+        "site_key": "site_83009968",
+        "page_context": "Exploring the best fashion trends in 2026",
+        "anonymous_scores": {
+          "fashion": 0.8,
+          "tech": 0.2
+        },
+        "rejected_categories": [],
+        "top_n": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,22 @@
+info:
+  name: Chat WebSocket
+  type: websocket
+  seq: 1
+
+websocket:
+  url: "{{REKO_AI_SYSTEM_WS_URL}}/api/v1/ws/chat/{{chat_id}}?token={{ACCESS_TOKEN}}"
+  body:
+    type: json
+    data: |-
+      {
+        "message": "I'm feeling nostalgic in Lagos, what movies do you recommend?"
+      }
+
+runtime:
+  variables:
+    - name: chat_id
+      value: 6a001ad7b97a9d4e0e5fe397
+
+settings:
+  timeout: 0
+  keepAliveInterval: 0
